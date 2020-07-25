@@ -18,6 +18,7 @@ Built for amd64, 386, ARM and s390x CPU architectures.
 
 ## Setup
 
+1. You need Wireguard in your Kernel. It comes [by default on Linux kernels >= 5.6](https://www.xda-developers.com/wireguard-vpn-linux-kernel-5-6/).
 1. Get your host default interface
 
     ```sh
