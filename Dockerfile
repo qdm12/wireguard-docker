@@ -15,4 +15,3 @@ LABEL \
     org.opencontainers.image.title="Small container to run Wireguard commands for your host" \
     org.opencontainers.image.description="Small container to run Wireguard commands for your host"
 RUN apk add --no-cache -q --progress --update wireguard-tools iptables
-CMD [ "wg-quick", "up", "wg0" ]
