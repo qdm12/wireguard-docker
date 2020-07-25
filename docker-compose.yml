@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  iptables:
+    image: qmcgaw/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+    network_mode: host
+    command: wg-quick up wg0
+    #command: wg-quick down wg0
+    volumes:
+      - ./wg0.conf:/etc/wireguard/wg0:ro
+      - ./postup.sh:/etc/wireguard/postup.sh:ro
+      - ./postdown.sh:/etc/wireguard/postdown.sh:ro
+    restart: unless-stopped
