@@ -9,7 +9,7 @@ services:
     command: wg-quick up wg0
     #command: wg-quick down wg0
     volumes:
-      - ./wg0.conf:/etc/wireguard/wg0:ro
+      - ./wg0.conf:/etc/wireguard/wg0.conf:ro
       - ./postup.sh:/etc/wireguard/postup.sh:ro
       - ./postdown.sh:/etc/wireguard/postdown.sh:ro
     restart: unless-stopped
